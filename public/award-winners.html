@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academy Award winners 2024: See who took home the Oscar</title>
+    <link rel="stylesheet" href="./../styles.css">
+</head>
+<body>
+    
+    <body id="topnewsbody">
+        <header>
+            <h1>Kanco Top News</h1>
+        </header>
+    
+        <main class="container">
+            <nav id="entertainment_nav">
+                <div class="container">
+                    <a id="home-link">Home</a>
+                    <a id="news-link">News</a> |
+                    <a id="economy-link">Economy</a> |
+                    <a id="sports-link">Sports</a> |
+                    <a id="entertainment-link">Entertainment</a> |
+                    <a id="login-link">Sign Up / Login </a>
+                </div>
+            </nav>
+
+            <h1>Academy Award winners 2024: See who took home the Oscar</h1>
+
+            <div class="article-main-image">
+                <img src="/images/oppenheimer.webp" alt="" height="500px" width="900px">
+            </div>
+            
+
+            <div class="article-content2">
+                
+                <p class="article-text">
+                    The ceremony was prosperous for the two most-nominated films but less so for “Killers of the Flower Moon,” which won zero awards, and “Barbie,” which was a box office behemoth but only scored a win in the best original song category.
+                </p> <br>
+
+                <p>Other winners included award season favorite Da’Vine Joy Randolph (best supporting actress), drama “The Zone of Interest” (best international feature) and “The Boy and the Heron” (best animated feature) were among the other winners.
+                </p>
+
+                    <div >
+                        <article id="related-article-2">
+                            <!-- <h5>Related article:</h5>
+                            <h3>Oscar highlights: ‘Oppenheimer’ wins big, while Ryan Gosling and past winner cameos stole the show
+                            </h3>
+                            <img src="/images/oscar.jpeg" class="small-article-image-2"> -->
+                        </article>
+
+                        <p id="text-horizontal">
+                            <h1>Best picture </h1>
+                            <ul>
+                                <li>American Fiction</li>
+                                <li>Anatomy of a Fall</li>
+                                <li>Barbie</li>
+                                <li>The Holdovers</li>
+                                <li>Killers of the Flower Moon</li>
+                                <li>Maestro</li>
+                                <li>Oppenheimer - <b>WINNER</b></li>
+                                <li>Past Lives</li>
+                                <li>Poor Things</li>
+                                <li>The Zone of Interest</li>
+                            </ul>
+                           
+                        </p>
+                            
+                        
+                    </div>
+
+
+                    
+                        
+
+                        <p >
+                            <h1>
+                                Best actor in leading role
+                            </h1>
+
+                            <ul>
+                                <li>Bradley Cooper, "Maestro"
+                                </li>
+                                <li>Colman Domingo,"Rustin</li>
+                                <li>Paul Giamatti,"The Holdovers</li>
+                                <li>Cillian Murphy,"Oppenheimer" - <b>WINNER</b></li>
+                                <li>Jeffrey Wright,"American Fiction"</li>
+                            </ul>
+                        </p>      
+                        
+                        
+                        <p>
+                            <h1>Best actress in a leading role</h1>
+                            <ul>
+                                <li>Annette Bening, “Nyad”</li>
+                                <li>Lily Gladstone, “Killers of the Flower Moon”</li>
+                                <li>Sandra Hüller, “Anatomy of a Fall”</li>
+                                <li>Carey Mulligan, “Maestro”</li>
+                                <li>Emma Stone, “Poor Things” - <b>WINNER</b></li>
+                            </ul>
+                        </p>
+
+                        <p>
+                            <h1>Best director</h1>
+                            <ul>
+                                <li>Justine Triet, “Anatomy of a Fall”</li>
+                                <li>Martin Scorsese, “Killers of the Flower Moon”</li>
+                                <li>Christopher Nolan, “Oppenheimer” - <b>WINNER</b></li>
+                                <li>Yorgos Lanthimos, “Poor Things”</li>
+                                <li>Jonathan Glazer, “The Zone of Interest”</li>
+                            </ul>
+                        </p>
+                           
+
+                            
+                        
+                    
+
+                    
+                   
+                    
+              
+        
+
+               
+
+
+                
+                    
+            </div>
+
+            <div id="tag-container">
+                <a href="#tag" class="tags">oscar awards</a>
+                <a href="#tag" class="tags">oppenheimer</a>
+                <a href="#tag" class="tags">barbie</a>
+
+
+            </div>
+
+            <div id="button-container">
+                <button class="view-comments">View Comments</button> 
+            </div>
+            
+
+            </main>
+
+            <br>
+            <br>
+            <br>
+
+            <footer>
+                <div class="container">
+                    <p>&copy; 2024 Kanco Daily News</p>
+                </div>
+            </footer>    
+            
+            
+            <script>
+                $(document).ready(function(){
+                    $("#news-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("news.html", function(data) {
+                            $('body').html(data);
+                        });
+                    });
+                });
+                </script>
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#economy-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("economy.html", function(data) {
+                                $('body').html(data);
+                            });
+                        });
+                    });
+                    </script>
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#sports-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("sports.html", function(data) {
+                                $('body').html(data);
+                            });
+                        });
+                    });
+                    </script>
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#entertainment-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("entertainment.html", function(data) {
+                                $('body').html(data);
+                            });
+                        });
+                    });
+                    </script>
+                
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#login-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("login.html", function(data) {
+                                $('body').html(data);
+                                
+                            });
+                        });
+                    });
+                    </script>
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#home-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("index.html", function(data) {
+                                $('body').html(data);
+                                
+                            });
+                        });
+                    });
+                    </script>
+
+
+
+<!-- AJAX calls articles -->
+
+<script>
+    $(document).ready(function() {
+    var articleID = 9; 
+
+    $.ajax({
+        url: '/KanProjectWeb/Project/backend/rest/routes/getarticle',
+        data: { articleID: articleID },
+        dataType: "json",
+        success: function(data) {
+            var article = data.articles[0]; 
+
+            var relatedArticlesHtml = '';
+
+            relatedArticlesHtml += '<a id="' + article.linkID + '" class="'+ article.linkClass +' ">';
+            relatedArticlesHtml += '<img src="' + article.image +  '" alt="' + article.title + '" class="' + article.image_class + '">';
+            relatedArticlesHtml += '<h4>' + article.content + '</h4>';
+            relatedArticlesHtml += '</a>';
+
+            $('#related-article-2').html(relatedArticlesHtml);
+        },
+        error: function(xhr, status, error) {
+            console.error(status, error);
+        }
+    });
+});
+
+    </script>
+
+
+<!-- spapp articles -->
+
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#related-article-link-9", function(event) {
+            event.preventDefault();
+            var articleId = 9;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("entertainment-main-article.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#button-container", function(event) {
+            event.preventDefault();
+            $.get("comments.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<!-- Load categorizedArticles with category from tags -->
+<script>
+    $(document).ready(function() {
+        $('.tags').click(function() {
+            var category = $(this).text();
+            window.location.href = 'categorizedArticles.html?category=' + category;
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('.view-comments').click(function(e) {
+            e.preventDefault();
+            var articleID = 14;
+            window.location.href = 'comments.html?articleID=' + articleID;
+        });
+    });
+</script>
+
+
+<script src="../js/loginLogout.js"></script>
+
+</body>
+</html>
+

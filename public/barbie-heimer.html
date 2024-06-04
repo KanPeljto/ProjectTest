@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscars 2024: ‘Barbie’ might be the belle of the ball, but it looks like ‘Oppenheimer’s’ night</title>
+    <link rel="stylesheet" href="./../styles.css">
+</head>
+<body>
+    
+    <body id="topnewsbody">
+        <header>
+            <h1>Kanco Entertainment News</h1>
+        </header>
+    
+        <main class="container">
+            <nav id="entertainment_nav">
+                <div class="container">
+                    <a id="home-link">Home</a>
+                    <a id="news-link">News</a> |
+                    <a id="economy-link">Economy</a> |
+                    <a id="sports-link">Sports</a> |
+                    <a id="entertainment-link">Entertainment</a> |
+                    <a id="login-link">Sign Up / Login </a>
+                </div>
+            </nav>
+
+            <h1>Oscars 2024: ‘Barbie’ might be the belle of the ball, but it looks like ‘Oppenheimer’s’ night</h1>
+
+            <div class="article-main-image">
+                <img src="/images/gosling2.webp" alt="" height="500px" width="1000px">
+            </div>
+
+            <div class="article-content2">
+                
+                <p class="article-text">
+                    If you drink every time someone mentions “Barbie” at this Sunday’s Oscars, you probably won’t be awake to see the best picture category presented, even with the show’s earlier start time. Yet while the year’s biggest box-office winner will get plenty of attention – due in part to its much-debated “snubs” – the 96th Academy Awards looks destined to be “Oppenheimer’s” night.
+                </p> 
+                <br>
+
+                <p>For “Barbie,” despite the omission of star Margot Robbie and Greta Gerwig as actress and director, respectively (both are nominated in other categories), the lesson from this year’s nominations is an old one. Comedian Martin Mull famously observed that Hollywood is just “high school with money,” and based on recent awards history, the most popular kid in school seldom gets to be the valedictorian, too.</p>
+
+                    <div id="related-article-2-container">
+                        <article id="related-article-2">
+                            
+                        </article>
+
+                        <p id="text-horizontal">
+                            The Oscars serve various functions, among them delivering a three-hour commercial encouraging people to go to the movies – an imperative that has taken on extra urgency amid an extended slump triggered by the one-two punch of Covid and streaming.
+                            <br>
+                            <br>          
+                            Still, award telecasts also need to attract an audience to ensure the networks airing them will keep paying big bucks for the privilege, and nominating movies more people have seen provides a stronger rooting interest and a potential means of boosting (or at least sustaining) TV ratings.
+                            <br>
+                            <br>
+                            
+                        
+                    </div>
+
+                    <h2>Barbie-Heimer</h2>
+
+
+
+                    <div id="related-article-2-container">
+                        
+
+                        <p id="text-horizontal-right">
+                            As box-office hits “Barbie” and “Oppenheimer” are really the outliers, with the eight other best picture candidates – “American Fiction,” “Anatomy of a Fall,” “The Holdovers,” “Killers of the Flower Moon,” “Maestro,” “Past Lives,” “Poor Things,” and “The Zone of Interest” – totaling about $400 million in box office worldwide, a sum “Barbie” surpassed by more than $1 billion. (Figures aren’t even available for “Maestro,” which principally played on Netflix.)
+                            <br>
+                            <br>
+                            “Barbie” (released by Warner Bros., like CNN, a unit of Warner Bros. Discovery) figures to have a more muted showing, with its best chances likely coming for song (with two of the nominees) and costume design.
+                             <br>
+                             <br>
+                             Granted, arguments and second-guessing about award selections is a fundamental part of the process, sometimes long after the show’s over. Just ask any film historian about “How Green Was My Valley” beating out “Citizen Kane,” “Shakespeare in Love” upsetting “Saving Private Ryan” or the lightly regarded “Crash” getting chosen over “Brokeback Mountain.”
+                             <br>
+                             <br>
+                             Given that, wherever one’s loyalties lie among this year’s nominees, those who still tune in live should just kick back, admire the fashions and, hopefully, enjoy the show. And if the awards hold to form, the night should end with a (very big) bang.
+                        </p>
+                            <article id="related-article-3">
+                               
+                            </article>
+
+                            
+                        
+                    </div>
+
+                    
+                   
+                    
+              
+        
+
+               
+
+
+                
+                    
+            </div>
+
+            <div id="tag-container">
+                <a href="#tag" class="tags">Barbie</a>
+                <a href="#tag" class="tags">Oppenheimer</a>
+                <a href="#tag" class="tags">oscar awards</a>
+
+            </div>
+
+            <div id="button-container">
+                <button class="view-comments">View Comments</button> 
+            </div>
+            
+
+            </main>
+
+            <br>
+            <br>
+            <br>
+
+            <footer>
+                <div class="container">
+                    <p>&copy; 2024 Kanco Daily News</p>
+                </div>
+            </footer>    
+            
+            
+
+            <script>
+                $(document).ready(function(){
+                    $("#news-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("news.html", function(data) {
+                            $('body').html(data);
+                        });
+                    });
+                });
+                </script>
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#economy-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("economy.html", function(data) {
+                                $('body').html(data);
+                            });
+                        });
+                    });
+                    </script>
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#sports-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("sports.html", function(data) {
+                                $('body').html(data);
+                            });
+                        });
+                    });
+                    </script>
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#entertainment-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("entertainment.html", function(data) {
+                                $('body').html(data);
+                            });
+                        });
+                    });
+                    </script>
+                
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#login-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("login.html", function(data) {
+                                $('body').html(data);
+                                
+                            });
+                        });
+                    });
+                    </script>
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#home-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("index.html", function(data) {
+                                $('body').html(data);
+                                
+                            });
+                        });
+                    });
+                    </script>
+
+<!-- AJAX calls articles -->
+
+<script>
+    $(document).ready(function() {
+    var articleID = 14; 
+
+    $.ajax({
+        url: '/KanProjectWeb/Project/backend/rest/routes/getarticle',
+        data: { articleID: articleID },
+        dataType: "json",
+        success: function(data) {
+            var article = data.articles[0]; 
+
+            var relatedArticlesHtml = '';
+
+            relatedArticlesHtml += '<a id="' + article.linkID + '" class="'+ article.linkClass +' ">';
+            relatedArticlesHtml += '<img src="' + article.image +  '" alt="' + article.title + '" class="' + article.image_class + '">';
+            relatedArticlesHtml += '<h4>' + article.content + '</h4>';
+            relatedArticlesHtml += '</a>';
+
+            $('#related-article-2').html(relatedArticlesHtml);
+        },
+        error: function(xhr, status, error) {
+            console.error(status, error);
+        }
+    });
+});
+
+    </script>
+
+<script>
+    $(document).ready(function() {
+    var articleID = 9; 
+
+    $.ajax({
+        url: '/KanProjectWeb/Project/backend/get_article.php',
+        data: { articleID: articleID },
+        dataType: "json",
+        success: function(data) {
+            var article = data.articles[0]; 
+
+            var relatedArticlesHtml = '';
+
+            relatedArticlesHtml += '<a id="' + article.linkID + '" class="'+ article.linkClass +' ">';
+            relatedArticlesHtml += '<img src="' + article.image +  '" alt="' + article.title + '" class="' + article.image_class + '">';
+            relatedArticlesHtml += '<h4>' + article.content + '</h4>';
+            relatedArticlesHtml += '</a>';
+
+            $('#related-article-3').html(relatedArticlesHtml);
+        },
+        error: function(xhr, status, error) {
+            console.error(status, error);
+        }
+    });
+});
+
+    </script>
+
+<!-- spapp articles -->
+
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", ".main_article", function(event) {
+            event.preventDefault();
+            var articleId = 9;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("entertainment-main-article.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#button-container", function(event) {
+            event.preventDefault();
+            $.get("comments.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+
+<!-- Load categorizedArticles with category from tags -->
+<script>
+    $(document).ready(function() {
+        $('.tags').click(function(e) {
+            e.preventDefault();
+            var category = $(this).text();
+            window.location.href = 'categorizedArticles.html?category=' + category;
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('.view-comments').click(function(e) {
+            e.preventDefault();
+            var articleID = 15;
+            window.location.href = 'comments.html?articleID=' + articleID;
+        });
+    });
+</script>
+
+
+<script src="../js/loginLogout.js"></script>
+
+</body>
+</html>
+

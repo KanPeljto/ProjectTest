@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two injured, one in gravely danger</title>
+    <link rel="stylesheet" href="./../styles.css">
+</head>
+<body>
+    
+    <body id="topnewsbody">
+        <header>
+            <h1>Kanco Top News</h1>
+        </header>
+    
+        <main class="container">
+            <nav id="news_nav">
+                <div class="container">
+                    <a id="news-link">News</a> |
+                    <a id="economy-link">Economy</a> |
+                    <a id="sports-link">Sports</a> |
+                    <a id="entertainment-link">Entertainment</a> |
+                    <a id="login-link">Sign Up / Login </a>
+                </div>
+            </nav>
+
+            <h1>Two Wounded, One in Grave Danger: Unraveling the Aftermath</h1>
+
+            <div class="article-main-image">
+                <img src="/images/ambulance.webp" alt="" height="500px" width="1000px">
+            </div>
+
+            <div class="article-content">
+                <p>The aftermath of the violent altercation on Martin Luther King Square left the community reeling, with questions swirling and tensions running high. As investigators sifted through the debris and interviewed witnesses, a clearer picture of the events began to emerge, shedding light on the harrowing sequence of events that had unfolded. <br> <br> <br> <br>
+                    Among the injured, one individual, identified as Marcus Ramirez, lay in a hospital bed fighting for his life. The gravity of his condition sent shockwaves through the neighborhood, as friends and family gathered anxiously, praying for his recovery. Marcus, a beloved member of the community, was known for his kindness and generosity, and his absence cast a somber shadow over the area.
+                    <img src="/images/flowersstreet.jpeg" alt="Flowers laid on the location of shooting" height="200px" width="300px" class="small-article-image"> <br>
+                    Meanwhile, the other wounded individual, a young woman named Maya Johnson, was in stable condition, though her physical injuries belied the emotional trauma she endured. Maya, a bystander caught in the crossfire, recounted the terrifying moments when chaos erupted around her, leaving her shaken to the core. As she grappled with the aftermath of the incident, she found solace in the outpouring of support from her neighbors and friends, who rallied around her in her time of need.
+                    As the investigation unfolded, authorities pieced together the events leading up to the violent confrontation. Tensions had been simmering in the neighborhood for weeks, fueled by long-standing grievances and simmering rivalries. The collision between the two vehicles had served as a catalyst, igniting a powder keg of emotions that erupted into gunfire. <br> <br>
+                    Despite the uncertainty surrounding the motive behind the altercation, one thing remained clear: the need for unity and resilience in the face of adversity. Community leaders, recognizing the importance of healing and reconciliation, organized peace rallies and dialogue sessions aimed at fostering understanding and empathy among residents. <br> <br> <br>
+                    In the days that followed, as Marcus fought for his life and Maya began her journey towards healing, the community banded together, drawing strength from their shared experiences and determination to overcome the scars of the past. Though the road ahead would be fraught with challenges, their unwavering resolve and commitment to building a brighter future served as a beacon of hope in the darkness.
+                </p>
+
+               
+
+
+                <div class="article-related-sidebar">
+                    <h3>Related</h3>
+                    
+                    <div id="related-articles">
+                        
+                    </div>
+                </div>
+                    
+            </div>
+
+            <div id="tag-container">
+                <a href="#tag" class="tags">shooting</a>
+                <a href="#tag" class="tags">car crash</a>
+
+            </div>
+
+            <div id="button-container">
+                <button class="view-comments">View Comments</button> 
+            </div>
+            
+
+            </main>
+
+            <br>
+            <br>
+            <br>
+
+            <footer>
+                <div class="container">
+                    <p>&copy; 2024 Kanco Daily News</p>
+                </div>
+            </footer>     
+
+
+
+            <!-- AJAX calls for related articles -->
+
+            <script>
+                $(document).ready(function() {
+                    var articleIDs = [3, 2];
+        
+                    articleIDs.forEach(function(articleID) {
+                        $.ajax({
+                            url: '/KanProjectWeb/Project/backend/rest/routes/getarticle',
+                            data: { articleID: articleID },
+                            dataType: 'json',
+                            success: function(data) {
+                                var article = data.articles[0];
+                                var articleHtml = '';
+        
+                                articleHtml += '<div class="related-article">';
+                                articleHtml += '<a id="'+article.linkID + '" + href="' + article.link + '">';
+                                articleHtml += '<img src="' + article.image + '" alt="' + article.title + '" class="article-image">';
+                                articleHtml += '<h4>' + article.title + '</h4>';
+                                articleHtml += '</a>';
+                                articleHtml += '</div>';
+        
+                                $('#related-articles').append(articleHtml);
+                            },
+                            error: function(xhr, status, error) {
+                                console.error(status, error);
+                            }
+                        });
+                    });
+                });
+            </script>
+        
+
+
+
+
+                
+
+                
+
+
+            <script>
+            $(document).ready(function(){
+                $("#news-link").click(function(event) {
+                    event.preventDefault();
+                    $.get("news.html", function(data) {
+                        $('body').html(data);
+                    });
+                });
+            });
+            </script>
+            
+            <script>
+                $(document).ready(function(){
+                    $("#economy-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("economy.html", function(data) {
+                            $('body').html(data);
+                        });
+                    });
+                });
+                </script>
+            
+            <script>
+                $(document).ready(function(){
+                    $("#sports-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("sports.html", function(data) {
+                            $('body').html(data);
+                            
+                        });
+                    });
+                });
+                </script>
+            
+            <script>
+                $(document).ready(function(){
+                    $("#entertainment-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("entertainment.html", function(data) {
+                            $('body').html(data);
+                           
+                        });
+                    });
+                });
+                </script>
+            
+            
+            <script>
+                $(document).ready(function(){
+                    $("#login-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("login.html", function(data) {
+                            $('body').html(data);
+                           
+                        });
+                    });
+                });
+                </script>
+
+
+<!-- Related articles SPAPP -->
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#related-article-link-2", function(event) {
+            event.preventDefault();
+            $.get("witnesses-page.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#related-article-link-3", function(event) {
+            event.preventDefault();
+            $.get("article-page.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#button-container", function(event) {
+            event.preventDefault();
+            $.get("comments.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+
+<!-- Load categorizedArticles with category from tags -->
+<script>
+    $(document).ready(function() {
+        $('.tags').click(function() {
+            var category = $(this).text();
+            window.location.href = 'categorizedArticles.html?category=' + category;
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('.view-comments').click(function(e) {
+            e.preventDefault();
+            var articleID = 1;
+            window.location.href = 'comments.html?articleID=' + articleID;
+        });
+    });
+</script>
+
+
+
+<script src="../js/loginLogout.js"></script>
+
+
+</body>
+</html>
+

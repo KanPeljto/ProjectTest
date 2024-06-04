@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two injured in car crash gunfight</title>
+    <link rel="stylesheet" href="./../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Kanco Top News</h1>
+    </header>
+    <main class="container">
+        <nav id="news_nav">
+            <div class="container">
+                <a id="news-link">News</a> |
+                <a id="economy-link">Economy</a> |
+                <a id="sports-link">Sports</a> |
+                <a id="entertainment-link">Entertainment</a> |
+                <a id="login-link">Sign Up / Login </a>
+            </div>
+        </nav>
+
+        <h1>Two injured in car crash gunfight</h1>
+
+        <div class="article-main-image">
+            <img src="/images/saobracajna nesreca.jpeg" alt="" height="500px" width="1000px">
+        </div>
+
+        <div class="article">
+            <div class="article-content">
+                
+    
+                    <p>In a harrowing sequence of events, a routine evening took a violent turn as a car crash escalated into a gunfight, leaving two individuals injured and a community shaken. The incident unfolded on Martin Luther King Square around 11:30 PM, sending shockwaves through the neighborhood. <br> <br> <br> <br>
+                        Eyewitnesses recount the chaos that ensued as screeching tires and the deafening sound of gunfire shattered the tranquility of the evening. Initial reports suggest that the confrontation erupted following a collision between two vehicles, triggering a dispute that quickly escalated into violence.
+                        Amidst the chaos, bystanders ducked for cover as bullets flew, and screams filled the air. <br> <br> <br>
+                        <img src="/images/ambulance.webp" alt="Ambulance on the scene" height="200px" width="300px" class="small-article-image"> <br>
+                        Emergency services rushed to the scene, their sirens piercing through the cacophony of chaos, as they worked swiftly to attend to the injured.
+                        Authorities, swift to respond, cordoned off the area and launched an investigation into the incident. <br> The motive behind the altercation remains unclear, leaving residents on edge and seeking answers in the aftermath of the unsettling event. <br> <br>
+                        The incident serves as a stark reminder of the fragility of peace and the suddenness with which violence can erupt, even in the most unexpected of places. As the community grapples with the aftermath of the ordeal, questions linger about the underlying factors that led to such a violent confrontation. <br> <br> <br>
+                        In the wake of this unsettling event, authorities urge residents to remain vigilant and report any suspicious activity promptly. While the scars of the incident may take time to heal, the resilience of the community shines through as they come together to support one another in the face of adversity.
+                    </p>
+    
+            </div>
+    
+            <div class="article-related-sidebar">
+                <h3>Related</h3>
+                
+                <div id="related-articles"></div>
+            </div>
+        </div>
+
+       
+        
+        <div id="tag-container">
+            <a href="#tag" class="tags">shooting</a>
+            <a href="#tag" class="tags">car crash</a>
+        </div>
+
+        <div id="button-container">
+            <button class="view-comments">View Comments</button> 
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kanco Daily News</p>
+        </div>
+    </footer>
+
+    <!-- AJAX calls for related articles -->
+
+    <script>
+        $(document).ready(function() {
+            var articleIDs = [1, 2];
+
+            articleIDs.forEach(function(articleID) {
+                $.ajax({
+                    url: '/KanProjectWeb/Project/backend/rest/routes/getarticle',
+                    data: { articleID: articleID },
+                    dataType: 'json',
+                    success: function(data) {
+                        var article = data.articles[0];
+                        var articleHtml = '';
+
+                        articleHtml += '<div class="related-article">';
+                        articleHtml += '<a id="'+article.linkID + '" + href="' + article.link + '">';
+                        articleHtml += '<img src="' + article.image + '" alt="' + article.title + '" class="article-image">';
+                        articleHtml += '<h4>' + article.title + '</h4>';
+                        articleHtml += '</a>';
+                        articleHtml += '</div>';
+
+                        $('#related-articles').append(articleHtml);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error);
+                    }
+                });
+            });
+        });
+    </script>
+
+        
+
+
+<!-- SPAPP for navbar -->
+
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+            <script>
+            $(document).ready(function(){
+                $("#news-link").click(function(event) {
+                    event.preventDefault();
+                    $.get("news.html", function(data) {
+                        $('body').html(data);
+                    });
+                });
+            });
+            </script>
+            
+            <script>
+                $(document).ready(function(){
+                    $("#economy-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("economy.html", function(data) {
+                            $('body').html(data);
+                        });
+                    });
+                });
+                </script>
+            
+            <script>
+                $(document).ready(function(){
+                    $("#sports-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("sports.html", function(data) {
+                            $('body').html(data);
+                            
+                        });
+                    });
+                });
+                </script>
+            
+            <script>
+                $(document).ready(function(){
+                    $("#entertainment-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("entertainment.html", function(data) {
+                            $('body').html(data);
+                           
+                        });
+                    });
+                });
+                </script>
+            
+            
+            <script>
+                $(document).ready(function(){
+                    $("#login-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("login.html", function(data) {
+                            $('body').html(data);
+                           
+                        });
+                    });
+                });
+                </script>
+
+
+
+<!-- SPAPP for related articles -->
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#related-article-link-1", function(event) {
+            event.preventDefault();
+            $.get("2-wounded-1-in-danger.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#related-article-link-2", function(event) {
+            event.preventDefault();
+            $.get("witnesses-page.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#button-container", function(event) {
+            event.preventDefault();
+            $.get("comments.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<!-- Load categorizedArticles with category from tags -->
+<script>
+    $(document).ready(function() {
+        $('.tags').click(function() {
+            var category = $(this).text();
+            window.location.href = 'categorizedArticles.html?category=' + category;
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('.view-comments').click(function(e) {
+            e.preventDefault();
+            var articleID = 3;
+            window.location.href = 'comments.html?articleID=' + articleID;
+        });
+    });
+</script>
+                
+
+<script src="../js/loginLogout.js"></script>
+    
+</body>
+</html>

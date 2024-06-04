@@ -1,0 +1,157 @@
+{
+    "all_articles": [
+        {
+            "id": 1,
+            "title": "From the crime scene: Two wounded, one in gravely danger",
+            "date": "March 20th, 2024",
+            "categories": ["shooting", "car crash"],
+            "image": "/images/ambulance.webp",
+            "linkID": "related-article-link-1"
+        },
+        {
+            "id": 2,
+            "title": "Witnesses called to testify in ongoing investigation",
+            "date": "March 21th, 2024",
+            "categories": ["shooting", "car crash"],
+            "image": "/images/witness.jpeg",
+            "linkID": "related-article-link-2"
+        },
+        {
+            "id": 3,
+            "title": "Two injured in car crash gunfight",
+            "date": "March 19th, 2024",
+            "categories": ["shooting", "car crash"],
+            "image": "/images/saobracajna nesreca.jpeg",
+            "linkID": "related-article-link-3"
+        },
+        {
+            "id": 4,
+            "title": "Haley exits race, creating a Biden-Trump rematch",
+            "date": "March 24th,2024",
+            "categories": ["trump", "biden", "elections","haley"],
+            "image": "/images/haley.jpeg",
+            "image_class": "small-article-image-2",
+            "content": "As his last major rival drops out, Trump becomes the presumptive Republican nominee, setting up a November showdown with Biden",
+            "linkID": "related-article-link-4"
+        },
+        {
+            "id": 5,
+            "title": "Trump vs Biden elections",
+            "date": "March 24th,2024",
+            "categories": ["trump", "biden", "elections"],
+            "image": "/images/trumpbiden.jpeg",
+            "image_class": "small-article-image-2",
+            "content": "The general election is here and it’s Trump vs. Biden",
+            "linkID": "related-article-link-5"
+        },
+        {
+            "id": 6,
+            "title": "Justices ruled Trump couldn’t be removed from Colorado’s ballot, a sweeping ruling that brushed aside whether he is an insurrectionist",
+            "date": "March 30th,2024",
+            "categories": ["trump", "biden", "elections"],
+            "image": "/images/congress.jpeg",
+            "image_class": "small-article-image-2",
+            "content": "The Supreme Court on Monday ruled that former President Donald Trump could not be removed from the ballot in Colorado or any other state",
+            "linkID": "related-article-link-6"
+        },
+        {
+            "id": 7,
+            "title": "Dow tumbles more than 500 points as hot inflation data stokes fears about higher-for-longer rates",
+            "date": "March 7th,2024",
+            "categories": ["stocks", "inflation"],
+            "image": "/images/dow.webp",
+            "linkClass": "main_article",
+            "content": "Stocks took a dive Tuesday after a key inflation report revealed stubborn price increases, raising concerns on Wall Street that the Federal Reserve will keep rates higher for longer than anticipated.",
+            "linkID": "related-article-link-7"
+        },
+        {
+            "id": 8,
+            "title": "Partizan thrived as Aleksa Avramovic fired on all cylinders",
+            "date": "March 10th,2024",
+            "categories": ["Partizan", "Zeljko", "Obradovic", "Avramovic", "basketball"],
+            "image": "/images/avramovic.jpeg",
+            "linkClass": "main_article",
+            "linkID": "related-article-link-8",
+            "content": "The home team’s playmaker stood out in an electrifying, high-scoring contest in front of a packed crowd"
+        },
+        {
+            "id": 9,
+            "title": "Oscar highlights: ‘Oppenheimer’ wins big, while Ryan Gosling and past winner cameos stole the show",
+            "date": "March 14th,2024",
+            "categories": ["oscar awards", "Oppenheimer", "Gosling", "Barbie"],
+            "image": "/images/oscar.jpeg",
+            "linkClass": "main_article",
+            "content": " Oscar highlights: ‘Oppenheimer’ wins big, while Ryan Gosling and past winner cameos stole the show",
+            "linkID": "related-article-link-9"
+        },
+        {
+            "id": 10,
+            "title": "The Fed probably won’t cut rates in March. Here’s what that means for markets",
+            "date": "March 5th,2024",
+            "categories": ["fed", "market"],
+            "image": "/images/jerome powell.webp",
+            "image_class": "small-article-image-2",
+            "content": "The Fed probably won’t cut rates in March. Here’s what that means for markets",
+            "linkID": "related-article-link-10"
+        },
+        {
+            "id": 11,
+            "title": "Here’s why the Fed cares about the cost of your haircut and doctor’s visit",
+            "date": "March 6th,2024",
+            "categories": ["inflation", "biden"],
+            "image": "/images/haircut.webp",
+            "image_class": "small-article-image-2",
+            "content": "America’s inflation problem has improved greatly in some respects — but it remains stubborn for the price of services.",
+            "linkID": "related-article-link-11"
+        },
+        {
+            "id": 12,
+            "title": "Happy brithday,maestro! Euroleague and Partizan celebrate Zeljko Obradovic's birthday",
+            "date": "March 13th,2024",
+            "categories": ["Obradovic", "Partizan"],
+            "image": "/images/zoc.webp",
+            "image_class": "small-article-image-2",
+            "content": "Zeljko Obradovic celebrates his 64th birthday on the 9th of March and the Euroleague has once again shown what respect he has as a nine-time Euroleaue champion.",
+            "linkID": "related-article-link-12"
+        },
+        {
+            "id": 13,
+            "title": "Milan tied a EuroLeague record on night of strange stats",
+            "date": "March 13th,2024",
+            "categories": ["Milan", "Partizan","Euroleague","basketball"],
+            "image": "/images/milano.webp",
+            "image_class": "small-article-image-2",
+            "content": "Some very unusual stats emerged from EA7 Emporio Armani Milan’s thrilling 85-83 victory over Partizan Mozzart Bet Belgrade on Friday night, which significantly boosted the Italian team’s hopes of postseason action by moving within one win of the Serbian visitors.",
+            "linkID": "related-article-link-13"
+        },
+        {
+            "id": 14,
+            "title": "Academy Award winners 2024: See who took home the Oscar",
+            "date": "March 13th,2024",
+            "categories": ["oscar awards","oppenheimer","barbie"],
+            "image": "/images/oppenheimer.webp",
+            "image_class": "small-article-image-2",
+            "content": "Academy Award winners 2024: See who took home the Oscar",
+            "linkID": "related-article-link-14"
+        },
+        {
+            "id": 15,
+            "title": "Oscars 2024: ‘Barbie’ might be the belle of the ball, but it looks like ‘Oppenheimer’s’ night",
+            "date": "March 13th,2024",
+            "categories": ["oscar awards","oppenheimer","barbie"],
+            "image": "/images/gosling2.webp",
+            "image_class": "small-article-image-2",
+            "content": " Oscars 2024: ‘Barbie’ might be the belle of the ball, but it looks like ‘Oppenheimer’s’ night",
+            "linkID": "related-article-link-15"
+        },
+        {
+            "id": 16,
+            "title": "OpenAI fires back at Elon Musk",
+            "date": "March 13th,2024",
+            "categories": ["Elon","Musk","OpenAI"],
+            "image": "/images/ilon.webp",
+            "image_class": "small-article-image-2",
+            "linkID": "related-article-link-16"
+        }
+    ]
+}

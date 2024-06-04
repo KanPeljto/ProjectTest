@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanco top news</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body id="topnewsbody">
+    <header>
+        <h1>Kanco Top News</h1>
+    </header>
+
+
+    <main class="container">
+        <nav id="news_nav">
+            <div class="container">
+                <div class="container">
+                    <a id="home-link">Home</a>
+                    <a id="news-link">News</a> |
+                    <a id="economy-link">Economy</a> |
+                    <a id="sports-link">Sports</a> |
+                    <a id="entertainment-link">Entertainment</a> |
+                    <a class="login_tab " id="login-link">Sign Up / Login</a>  
+            </div>
+        </nav>
+
+        <h2><div id="newsicon"></div>News</h2>
+           <article class="main_article" ">
+            <h2>Two injured in car crash gunfight</h2>
+                <img src="/images/saobracajna nesreca.jpeg" alt="Picture of the crime scene">
+                    <p>In a harrowing sequence of events, a routine evening took a violent turn as a car crash escalated into a gunfight, leaving two individuals injured and a community shaken. The incident unfolded on Marthin Luther King Square on Sunday afternoon, sending shockwaves through the neighborhood....
+                    </p>
+            </article>
+            <br>
+            <br>
+            <br>
+
+        <section class="news-section">
+            
+            <div id = 'articles'>
+                <div class="col">
+                    <article class="news_article">
+                        <h3 id="sec_article">Justices ruled Trump couldn’t be removed from Colorado’s ballot, a sweeping ruling that brushed aside whether he is an insurrectionist</h3>
+                        <img src="/images/trumpelection.jpeg" height="250" width="300">
+                        <p>
+                            The Supreme Court on Monday ruled that former President Donald Trump could not be removed from the ballot in Colorado or any other state – a sweeping and historic ruling that brushed aside a lawsuit claiming that he disqualified himself from office because of his actions on January 6, 2021.</p>
+                    </article>
+
+                    <article>
+                        <h3>Haley exits race, creating a Biden-Trump rematch</h3>
+                        <img src="/images/haley.jpeg">
+                        <p>As his last major rival drops out, Trump becomes the presumptive Republican nominee, setting up a November showdown with Biden</p>
+                    </article>
+                </div> 
+            
+            
+            <div class="children">
+            <article>
+                <h3 id="sec_article">
+                    News live stream
+                </h3>
+                <iframe width="170" height="200" src="https://www.youtube.com/embed/gN0PZCe-kwQ?si=p2WhS7waDqffoQmf&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </article>
+            
+            <article>
+                <h3>Trump vs biden elections</h3>
+                <img src="/images/trumpbiden.jpeg" height="1000" width="100">
+                <p> 
+                    Donald Trump left the White House a loser.
+                    
+                    But now, only one man, President Joe Biden, can thwart his predecessor’s return in what would be the most astonishing political comeback in history.</p>
+            </article>
+
+            <article>
+                <h3>OpenAI publishes Elon Musk’s emails. ‘We’re sad that it’s come to this’</h3>
+                <img src="/images/musk.jpeg">
+            </article>
+
+            
+           
+        </div>   
+            
+        </section>
+        
+
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kanco Daily News</p>
+        </div>
+    </footer>
+    
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="assets/js/jquery.spapp.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+
+    <script>
+        $(document).ready(function(){
+            $("#home-link").click(function(event) {
+                event.preventDefault();
+                $.get("index.html", function(data) {
+                    $('body').html(data);
+                    app.route({
+                        load: 'index.html'
+                    });
+                });
+            });
+        });
+        </script>
+
+    <script>
+        $(document).ready(function(){
+            $("#economy-link").click(function(event) {
+                event.preventDefault();
+                $.get("economy.html", function(data) {
+                    $('body').html(data);
+                    app.route({
+                        load: 'economy.html'
+                    });
+                });
+            });
+        });
+        </script>
+    
+    <script>
+        $(document).ready(function(){
+            $("#sports-link").click(function(event) {
+                event.preventDefault();
+                $.get("sports.html", function(data) {
+                    $('body').html(data);
+                    app.route({
+                        load: 'sports.html'
+                    });
+                });
+            });
+        });
+        </script>
+    
+    <script>
+        $(document).ready(function(){
+            $("#entertainment-link").click(function(event) {
+                event.preventDefault();
+                $.get("entertainment.html", function(data) {
+                    $('body').html(data);
+                    app.route({
+                        load: 'entertainment.html'
+                    });
+                });
+            });
+        });
+        </script>
+    
+    
+    <script>
+        $(document).ready(function(){
+            $("#login-link").click(function(event) {
+                event.preventDefault();
+                $.get("login.html", function(data) {
+                    $('body').html(data);
+                    app.route({
+                        load: 'login.html'
+                    });
+                });
+            });
+        });
+        </script>
+
+</body>
+</html>

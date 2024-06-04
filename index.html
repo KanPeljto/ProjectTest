@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanco</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Kanco Daily News</h1>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <a id="news-link">News</a> |
+            <a id="economy-link">Economy</a> |
+            <a id="sports-link">Sports</a> |
+            <a id="entertainment-link">Entertainment</a> |
+            <a class="login_tab " id="login-link">Sign Up / Login</a> 
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="main-section">
+            <article>
+                <h2><div id="newsicon"></div>News</h2>
+                <img src="/images/saobracajna nesreca.jpeg" alt="Picture of the crime scene">
+                <p>Most read news of the day, breaking news & etc.</p>
+            </article>
+            
+            <article>
+                <h2><div id="economyicon"></div>Business & Economy</h2>
+                <img src="/images/business.webp" alt="Apple music Appstore page">
+                <p>All the latest news in economics and business, tech and more.</p>
+            </article>
+
+            <article>
+                <h2><div id="sportsicon"></div>Sport</h2>
+                <img src="/images/sports.jpeg" alt="James Nunnally shooting a basketball">
+                <p>For all your sports news</p>
+            </article>
+
+            <article>
+                <h2><div id="entertainmenticon"></div>Lifestyle & entertainment</h2>
+                <img src="/images/entertainment.png" alt="Runway model">
+                <p>Lifestyle & entertainment news</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kanco Daily News</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+    $("#news-link").click(function(event) {
+        event.preventDefault();
+        $.get("news.html", function(data) {
+            $('body').html(data);
+            app.route({
+                load: 'news.html'
+            });
+        });
+    });
+});
+</script>
+
+<script>
+    $(document).ready(function(){
+        $("#economy-link").click(function(event) {
+            event.preventDefault();
+            $.get("economy.html", function(data) {
+                $('body').html(data);
+                app.route({
+                    load: 'economy.html'
+                });
+            });
+        });
+    });
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $("#sports-link").click(function(event) {
+            event.preventDefault();
+            $.get("sports.html", function(data) {
+                $('body').html(data);
+                app.route({
+                    load: 'sports.html'
+                });
+            });
+        });
+    });
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $("#entertainment-link").click(function(event) {
+            event.preventDefault();
+            $.get("entertainment.html", function(data) {
+                $('body').html(data);
+                app.route({
+                    load: 'entertainment.html'
+                });
+            });
+        });
+    });
+    </script>
+
+
+<script>
+    $(document).ready(function(){
+        $("#login-link").click(function(event) {
+            event.preventDefault();
+            $.get("login.html", function(data) {
+                $('body').html(data);
+                app.route({
+                    load: 'login.html'
+                });
+            });
+        });
+    });
+    </script>
+
+
+
+
+</body>
+</html>

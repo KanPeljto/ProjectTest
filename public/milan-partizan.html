@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milan tied a EuroLeague record on night of strange stats
+    </title>
+    <link rel="stylesheet" href="./../styles.css">
+</head>
+<body>
+    
+    <body id="topnewsbody">
+        <header>
+            <h1>Kanco Sport News</h1>
+        </header>
+    
+        <main class="container">
+            <nav id="sports_nav">
+                <div class="container">
+                    <a id="home-link">Home</a>
+                    <a id="news-link">News</a> |
+                    <a id="economy-link">Economy</a> |
+                    <a id="sports-link">Sports</a> |
+                    <a id="entertainment-link">Entertainment</a> |
+                    <a id="login-link">Sign Up / Login </a>
+            </nav>
+
+            <h1>Milan tied a EuroLeague record on night of strange stats</h1>
+
+            <div class="article-main-image">
+                <img src="/images/milano.webp" alt="Coach Zeljko Obradovic cheering" height="500px" width="900px">
+            </div>
+            
+
+            <div class="article-content2">
+                
+                <p class="article-text">
+                    Some very unusual stats emerged from EA7 Emporio Armani Milan’s thrilling 85-83 victory over Partizan Mozzart Bet Belgrade on Friday night, which significantly boosted the Italian team’s hopes of postseason action by moving within one win of the Serbian visitors.
+                    </p>
+                    <br>
+
+                <p>
+                    Firstly, Ettore Messina’s men tied an all-time EuroLeague record by only attempting 15 shots from two-point range, only previously matched by Anadolu Efes Istanbul in a playoff victory over FC Barcelona in 2019.
+                </p>
+
+                    <div id="related-article-2-container">
+                        <article id="related-article-2">
+                            
+                        </article>
+
+                        <p id="text-horizontal">
+                            And that wasn’t because Milan was struggling so badly from inside the arc that it gave up on the idea of scoring in penetration. Quite the opposite, in fact, as the hosts converted an extremely impressive 12 of those 15 two-point attempts, including the game-winner from Shabazz Napier that was originally ruled as a three before a video review showed his toe was just on the line.                            <br>
+                            <br>
+                            Remarkably, Devon Hall and Shavon Shields combined to convert all 9 of their two-point attempts, with no Milan player missing more than once from inside the arc.                            
+                            <br>
+                            <br>
+                            Why, then, were so few two-point shots attempted?
+                        </p>
+                            
+                        
+                    </div>
+
+
+                    <div id="related-article-2-container">
+                        
+
+                        <p id="text-horizontal-right">
+                            Firstly, because Milan was shooting the ball very well from deep, making 16 of its 31 three-point attempts as key scorers Shields, Hall, Napier and Nikola Mirotic all scored multiple triples.
+                            <br>
+                            <br>
+                            Secondly, the hosts were prevented from taking on more shots inside the arc by its far too frequent carelessness with the ball, committing 19 turnovers and allowing Partizan to stay in the game by having more possessions and therefore taking on far more shots from the field (59 against 46).                             
+                            <br>
+                             <br>
+                             <br>
+                             And to finish with another extremely uncommon stat: Milan’s big men Mirotic, Johannes Voigtmann, Nicolo Melli and Kyle Hines scored a combined total of 2 two-point shots (one apiece for Voigtmann and Hines). Yet, the Italian team still won the game. Sometimes the truth is stranger than fiction.                             
+                             <br>
+                         </p>                            
+                            <article id="related-article-3">
+                                
+                            </article>
+
+                            
+                        
+                    </div>
+
+                    
+                   
+                    
+              
+        
+
+               
+
+
+                
+                    
+            </div>
+
+            <div id="tag-container">
+                <a href="#tag" class="tags">Partizan</a>
+                <a href="#tag" class="tags">Milan</a>
+                <a href="#tag" class="tags">Euroleague</a>
+                <a href="#tag" class="tags">basketball</a>
+
+
+
+
+
+            </div>
+
+            <div id="button-container">
+                <button class="view-comments">View Comments</button> 
+            </div>
+            
+
+            </main>
+
+            <br>
+            <br>
+            <br>
+
+            <footer>
+                <div class="container">
+                    <p>&copy; 2024 Kanco Daily News</p>
+                </div>
+            </footer>  
+            
+            
+            <script>
+                $(document).ready(function(){
+                    $("#news-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("news.html", function(data) {
+                            $('body').html(data);
+                        });
+                    });
+                });
+                </script>
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#economy-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("economy.html", function(data) {
+                                $('body').html(data);
+                            });
+                        });
+                    });
+                    </script>
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#sports-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("sports.html", function(data) {
+                                $('body').html(data);
+                            });
+                        });
+                    });
+                    </script>
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#entertainment-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("entertainment.html", function(data) {
+                                $('body').html(data);
+                            });
+                        });
+                    });
+                    </script>
+                
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#login-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("login.html", function(data) {
+                                $('body').html(data);
+                                
+                            });
+                        });
+                    });
+                    </script>
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#home-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("index.html", function(data) {
+                                $('body').html(data);
+                                
+                            });
+                        });
+                    });
+                    </script>
+
+
+<!-- AJAX CALLS FOR  related articles -->
+
+<script>
+    $(document).ready(function() {
+$.ajax({
+    url: 'data.json',
+    dataType: 'json',
+    success: function(data) {
+        var articles = data.all_articles;
+        var specificIds = [8];
+        var relatedArticlesHtml = '';
+
+        var filteredArticles = articles.filter(function(article) {
+            return specificIds.includes(article.id);
+        });
+
+       
+        filteredArticles.forEach(function(article) {
+            relatedArticlesHtml += '<a id="' + 'related-article-2' + '" class="'+ article.linkID +' ">';
+            relatedArticlesHtml += '<img src="' + article.image +  '" alt="' + article.title + '" class="' + article.image_class + '">';                        relatedArticlesHtml += '<h4>' + article.content + '</h4>';
+            relatedArticlesHtml += '</a>';
+        });
+
+        $('#related-article-2').html(relatedArticlesHtml);
+    },
+    error: function(xhr, status, error) {
+        console.error(status, error);
+    }
+});
+});
+
+</script>
+
+
+<script>
+    $(document).ready(function() {
+$.ajax({
+    url: 'data.json',
+    dataType: 'json',
+    success: function(data) {
+        var articles = data.all_articles;
+        var specificIds = [12];
+        var relatedArticlesHtml = '';
+
+        var filteredArticles = articles.filter(function(article) {
+            return specificIds.includes(article.id);
+        });
+
+       
+        filteredArticles.forEach(function(article) {
+            relatedArticlesHtml += '<a id="' + 'related-article-2' + '" class="'+ article.linkID +' ">';
+            relatedArticlesHtml += '<img src="' + article.image +  ' "alt="' + article.title + '"class="' + article.image_class+'">';
+            relatedArticlesHtml += '<h4>' + article.content + '</h4>';
+            relatedArticlesHtml += '</a>';
+        });
+
+        $('#related-article-3').html(relatedArticlesHtml);
+    },
+    error: function(xhr, status, error) {
+        console.error(status, error);
+    }
+});
+});
+
+</script>
+
+
+<!-- spapp articles -->
+
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", ".related-article-link-8", function(event) {
+            event.preventDefault();
+            var articleId = 8;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("sports-main-article.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", ".related-article-link-12", function(event) {
+            event.preventDefault();
+            var articleId = 12;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("zoc-birthday.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#button-container", function(event) {
+            event.preventDefault();
+            $.get("comments.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<!-- Load categorizedArticles with category from tags -->
+<script>
+    $(document).ready(function() {
+        $('.tags').click(function() {
+            var category = $(this).text();
+            window.location.href = 'categorizedArticles.html?category=' + category;
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('.view-comments').click(function(e) {
+            e.preventDefault();
+            var articleID = 13;
+            window.location.href = 'comments.html?articleID=' + articleID;
+        });
+    });
+</script>
+
+
+<script src="../js/loginLogout.js"></script>
+
+</body>
+</html>
+

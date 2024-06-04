@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Fed probably won’t cut rates in March. Here’s what that means for markets</title>
+    <link rel="stylesheet" href="./../styles.css">
+</head>
+<body>
+    
+    <body id="topnewsbody">
+        <header>
+            <h1>Kanco Top News</h1>
+        </header>
+    
+        <main class="container">
+            <nav id="economy_nav">
+                <div class="container">
+                <a id="home-link">Home</a>
+                <a id="news-link">News</a> |
+                <a id="economy-link">Economy</a> |
+                <a id="sports-link">Sports</a> |
+                <a id="entertainment-link">Entertainment</a> |
+                <a id="login-link">Sign Up / Login </a>
+            </div>
+            </nav>
+
+            <h1>The Fed probably won’t cut rates in March. Here’s what that means for markets</h1>
+
+            <div class="article-main-image">
+                <img src="/images/jerome powell.webp" alt="Jerome Powell during an interview" height="500px" width="1000px">
+            </div>
+            
+
+            <div class="article-content2">
+                
+                <p class="article-text">
+
+                    Stocks just raced past a milestone level, even as investors grapple with interest rate cuts likely coming later than expected.                </p> <br>
+
+                <p>That means the Federal Reserve, which is tasked with stabilizing prices, could keep interest rates higher for longer if the rising costs of your haircut, your doctor’s visit and other services don’t abate soon.</p>
+
+                    <div id="related-article-2-container">
+                        
+                        <article id="related-article-2">
+                            
+                        </article>
+                        
+
+                        <p id="text-horizontal">
+                            Federal Reserve Chair Jerome Powell in January indicated that the central bank is unlikely to start paring rates in March, with the gangbusters January jobs report all but cementing that no cut is happening next month.                            <br>
+                            <br>
+                            <br>
+                            Investors now expect that the Fed will begin easing back rates in May or June, according to the CME FedWatch Tool.                            <br>
+                            Stocks fell initially as investors mulled over Powell’s comments. But all three major indexes still gained in January, and the benchmark S&P 500 index on Friday closed above the 5,000 level for the first time.                        </p>
+                            
+                        
+                    </div>
+
+
+                    <div id="related-article-2-container">
+                        
+
+                        <p id="text-horizontal-right">
+                            So, what does the Fed’s hawkish signal mean for investors?                                                        <br>
+                            Before the Bell spoke with Matt Orton, chief market strategist at Raymond James Investment Management, to discuss.                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                        The Labor Department releases its Consumer Price Index for February on Tuesday.                                                        <br>
+                                                        <br>
+                                                        Before the Bell spoke with Saira Malik, chief investment officer at Nuveen, about what’s going on with services inflation and why that’s important for the Fed.
+                                                        <br>
+                                                        <br>
+                                                    </p>                            
+                            <article id="related-article-3">
+                                
+                            </article>
+
+                            
+                        
+                    </div>
+
+                    
+                    <h2>CEOs are feeling more confident about economy — and concerned about the election</h2>
+                   
+                    <p>
+                        US business leaders are feeling more bullish about the direction of the economy — even as their worries about the upcoming presidential election mount, reports my colleague Matt Egan.                        <br>
+                        <br>
+
+                        For the first time in two years, optimism outweighs pessimism among CEOs, according to a CEO confidence measure for the first quarter released by The Conference Board on Thursday.                        <br>
+                        <br>
+
+                        The survey found 36% of CEOs expect economic conditions to improve in the short term, up significantly from 19% last quarter. Those findings mirror growing confidence in a soft landing — one that looked very unlikely just a year ago.                        <br>
+                        <br>
+
+                        In another sign that recession fears are ebbing, just 27% of the CEOs expect economic conditions to worsen over the next six months. That’s down from 47% during the fourth-quarter survey.
+                        <br>
+                        <br>
+                        Most CEOs (51%) say political uncertainty ahead of the 2024 election will be the greatest US challenge affecting businesses this year, according to The Conference Board.
+                    </p>
+                    
+              
+        
+
+                    
+
+
+                
+                    
+            </div>
+
+            <div id="tag-container">
+                <a href="#tag" class="tags">fed</a>
+                <a href="#tag" class="tags">market</a>
+
+            </div>
+
+            <div id="button-container">
+                <button class="view-comments">View Comments</button> 
+            </div>
+            
+
+            </main>
+
+            <br>
+            <br>
+            <br>
+
+            <footer>
+                <div class="container">
+                    <p>&copy; 2024 Kanco Daily News</p>
+                </div>
+            </footer>   
+            
+            
+            <script>
+                $(document).ready(function(){
+                    $("#news-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("news.html", function(data) {
+                            $('body').html(data);
+                        });
+                    });
+                });
+                </script>
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#economy-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("economy.html", function(data) {
+                                $('body').html(data);
+                            });
+                        });
+                    });
+                    </script>
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#sports-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("sports.html", function(data) {
+                                $('body').html(data);
+                            });
+                        });
+                    });
+                    </script>
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#entertainment-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("entertainment.html", function(data) {
+                                $('body').html(data);
+                            });
+                        });
+                    });
+                    </script>
+                
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#login-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("login.html", function(data) {
+                                $('body').html(data);
+                                
+                            });
+                        });
+                    });
+                    </script>
+                
+                <script>
+                    $(document).ready(function(){
+                        $("#home-link").click(function(event) {
+                            event.preventDefault();
+                            $.get("index.html", function(data) {
+                                $('body').html(data);
+                                
+                            });
+                        });
+                    });
+                    </script>
+
+    <!-- AJAX CALLS FOR  related articles -->
+
+    <script>
+        $(document).ready(function() {
+        var articleID = 7; 
+    
+        $.ajax({
+            url: '/KanProjectWeb/Project/backend/rest/routes/getarticle',
+            data: { articleID: articleID },
+            dataType: "json",
+            success: function(data) {
+                var article = data.articles[0]; 
+    
+                var relatedArticlesHtml = '';
+    
+                relatedArticlesHtml += '<a id="' + article.linkID + '" class="'+ article.linkClass +' ">';
+                relatedArticlesHtml += '<img src="' + article.image +  '" alt="' + article.title + '" class="' + article.image_class + '">';
+                relatedArticlesHtml += '<h4>' + article.content + '</h4>';
+                relatedArticlesHtml += '</a>';
+    
+                $('#related-article-2').html(relatedArticlesHtml);
+            },
+            error: function(xhr, status, error) {
+                console.error(status, error);
+            }
+        });
+    });
+    
+        </script>
+
+
+<script>
+    $(document).ready(function() {
+    var articleID = 11; 
+
+    $.ajax({
+        url: '/KanProjectWeb/Project/backend/get_article.php',
+        data: { articleID: articleID },
+        dataType: "json",
+        success: function(data) {
+            var article = data.articles[0]; 
+
+            var relatedArticlesHtml = '';
+
+            relatedArticlesHtml += '<a id="' + article.linkID + '" class="'+ article.linkClass +' ">';
+            relatedArticlesHtml += '<img src="' + article.image +  '" alt="' + article.title + '" class="' + article.image_class + '">';
+            relatedArticlesHtml += '<h4>' + article.content + '</h4>';
+            relatedArticlesHtml += '</a>';
+
+            $('#related-article-3').html(relatedArticlesHtml);
+        },
+        error: function(xhr, status, error) {
+            console.error(status, error);
+        }
+    });
+});
+
+    </script>
+
+<!-- spapp articles -->
+
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#related-article-link-7", function(event) {
+            event.preventDefault();
+            var articleId = 7;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("economy-main-article.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#related-article-link-11", function(event) {
+            event.preventDefault();
+            var articleId = 11;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("fed-cares.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#button-container", function(event) {
+            event.preventDefault();
+            $.get("comments.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<!-- Load categorizedArticles with category from tags -->
+<script>
+    $(document).ready(function() {
+        $('.tags').click(function() {
+            var category = $(this).text();
+            window.location.href = 'categorizedArticles.html?category=' + category;
+        });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+        $('.view-comments').click(function(e) {
+            e.preventDefault();
+            var articleID = 10;
+            window.location.href = 'comments.html?articleID=' + articleID;
+        });
+    });
+</script>
+
+
+<script src="../js/loginLogout.js"></script>
+</body>
+</html>
+

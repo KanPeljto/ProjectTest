@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanco entertainment news</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body id="topnewsbody">
+    <header>
+        <h1>Kanco Entertainment News</h1>
+    </header>
+
+    <main class="container">
+        <nav id="entertainment_nav">
+            <div class="container">
+                <a id="home-link">Home</a>
+                <a id="news-link">News</a> |
+                <a id="economy-link">Economy</a> |
+                <a id="sports-link">Sports</a> |
+                <a id="entertainment-link">Entertainment</a> |
+                <a class="login_tab " id="login-link">Sign Up / Login</a>  
+            </div>
+        </nav>
+
+        <h2><div id="entertainmenticon"></div>News</h2>
+            <a href="article-page.html" class="article_link"><article class="main_article">
+            <h2>Oscar highlights: ‘Oppenheimer’ wins big, while Ryan Gosling and past winner cameos stole the show</h2>
+                <img src="/images/oscar.jpeg" alt="Ryan Gosling cameo">
+                    <p>
+                        The Oscar telecast always juggles three major objectives: Honoring the year’s best films and those who made them; broadly celebrating and promoting the movie-going habit; and putting on a good show, both for the bigwigs in the theater and the folks at home.
+                    </p>
+            </article>
+            </a>
+            <br>
+            <br>
+            <br>
+
+        <section class="news-section">
+            
+            <div id = 'articles'>
+                <div class="col">
+                    <article class="news_article">
+                        <h3 id="sec_article">Academy Award winners 2024: See who took home the Oscar</h3>
+                        <img src="/images/oppenheimer.webp" height="250" width="300">
+                        <p>
+ 
+                            Ryan Gosling brought the best “Kenergy,” John Cena rocked his birthday suit and Jimmy Kimmel continued his streak as pitch-perfect Oscar host.
+                        </p>                    
+                    </article>
+
+                    <article>
+                        <h3>Oscars 2024: ‘Barbie’ might be the belle of the ball, but it looks like ‘Oppenheimer’s’ night</h3>
+                        <img src="/images/gosling2.webp">
+                        <p>
+                            If you drink every time someone mentions “Barbie” at this Sunday’s Oscars, you probably won’t be awake to see the best picture category presented, even with the show’s earlier start time. </p>
+                    </article>
+                </div> 
+            
+            
+            <div class="children">
+            <article>
+                <h3 id="sec_article">
+                    Oscar awards 2024 highlights
+                </h3>
+                <iframe width="370" height="270" src="https://www.youtube.com/embed/RT2a_SJ0VV8?si=pD_yUNw_f5e5dwVw&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            </article>
+            
+
+            
+           
+        </div>   
+            
+        </section>
+        
+
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kanco Daily News</p>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+    $("#news-link").click(function(event) {
+        event.preventDefault();
+        $.get("news.html", function(data) {
+            $('body').html(data);
+        });
+    });
+});
+</script>
+
+<script>
+    $(document).ready(function(){
+        $("#economy-link").click(function(event) {
+            event.preventDefault();
+            $.get("economy.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $("#sports-link").click(function(event) {
+            event.preventDefault();
+            $.get("sports.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $("#entertainment-link").click(function(event) {
+            event.preventDefault();
+            $.get("entertainment.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+    </script>
+
+
+<script>
+    $(document).ready(function(){
+        $("#login-link").click(function(event) {
+            event.preventDefault();
+            $.get("login.html", function(data) {
+                $('body').html(data);
+                
+            });
+        });
+    });
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $("#home-link").click(function(event) {
+            event.preventDefault();
+            $.get("index.html", function(data) {
+                $('body').html(data);
+                
+            });
+        });
+    });
+    </script>
+</body>
+</html>

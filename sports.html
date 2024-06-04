@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanco sport news</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body id="topnewsbody">
+    <header>
+        <h1>Kanco sport News</h1>
+    </header>
+
+    <main class="container">
+        <nav id="sports_nav">
+            <div class="container">
+                <a id="home-link">Home</a>
+                <a id="news-link">News</a> |
+                <a id="economy-link">Economy</a> |
+                <a id="sports-link">Sports</a> |
+                <a id="entertainment-link">Entertainment</a> |
+                <a class="login_tab " id="login-link">Sign Up / Login</a>  
+        </nav>
+
+        <h2><div id="sportsicon"></div>News</h2>
+            <a href="article-page.html" class="article_link"><article class="main_article">
+            <h2>Partizan thrived as Aleksa Avramovic fired on all cylinders</h2>
+                <img src="/images/sports.jpeg" alt="Picture of the crime scene">
+                    <p>
+                        The home team’s playmaker stood out in an electrifying, high-scoring contest in front of a packed crowd
+                    </p>
+            </article>
+            </a>
+            <br>
+            <br>
+            <br>
+
+        <section class="news-section">
+            
+            <div id = 'articles'>
+                <div class="col">
+                    <article class="news_article">
+                        <h3 id="sec_article">Happy brithday,maestro! Euroleague and Partizan celebrate Zeljko Obradovic's birthday</h3>
+                        <img src="/images/zoc.webp" height="250" width="300">
+                        <p>
+                            Zeljko Obradovic celebrates his 64th birthday on the 9th of March and the Euroleague has once again shown what respect he has as a nine-time Euroleaue champion.
+                        </p>
+                    </article>
+
+                    <article>
+                        <h3>Milan tied a EuroLeague record on night of strange stats</h3>
+                        <img src="/images/milano.webp">
+                        <p>Some very unusual stats emerged from EA7 Emporio Armani Milan’s thrilling 85-83 victory over Partizan Mozzart Bet Belgrade on Friday night, which significantly boosted the Italian team’s hopes of postseason action by moving within one win of the Serbian visitors.
+
+                        </p>
+                    </article>
+                </div> 
+            
+            
+            <div class="children">
+            <article>
+                <h3 id="sec_article">
+                    Highlights of the day
+                </h3>
+                <iframe width="370" height="270" src="https://www.youtube.com/embed/Ak-j1pYlaoI?si=9yBSzJZWfuSP4kVU&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </article>
+            
+            
+
+            
+           
+        </div>   
+            
+        </section>
+        
+
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kanco Daily News</p>
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+    $("#news-link").click(function(event) {
+        event.preventDefault();
+        $.get("news.html", function(data) {
+            $('body').html(data);
+        });
+    });
+});
+</script>
+
+<script>
+    $(document).ready(function(){
+        $("#economy-link").click(function(event) {
+            event.preventDefault();
+            $.get("economy.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $("#sports-link").click(function(event) {
+            event.preventDefault();
+            $.get("sports.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $("#entertainment-link").click(function(event) {
+            event.preventDefault();
+            $.get("entertainment.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+    </script>
+
+
+<script>
+    $(document).ready(function(){
+        $("#login-link").click(function(event) {
+            event.preventDefault();
+            $.get("login.html", function(data) {
+                $('body').html(data);
+                
+            });
+        });
+    });
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $("#home-link").click(function(event) {
+            event.preventDefault();
+            $.get("index.html", function(data) {
+                $('body').html(data);
+                
+            });
+        });
+    });
+    </script>
+</body>
+</html>

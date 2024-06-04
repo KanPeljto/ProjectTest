@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/Register Kanco news</title>
+    <link rel="stylesheet" href="./../styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="wrapper">
+        <form id="logForm">
+            <h1>Login</h1>
+            <div class="input-box">
+                <input type="email" id="email" placeholder="email" name="email" required>
+                <i class="bx bxs-user"> </i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" id="password" placeholder="password" name="password" required>
+                <i class="bx bxs-lock"> </i>
+
+            </div>
+
+            <div class="remember-forgot">
+                <label>
+                    <input type="checkbox"> Remember me
+                </label>
+            </div>
+
+            <button type="button" id="loginbtn" class="btn">Login</button>
+            
+            <div class="register-link">
+                <p>Don't have an account?
+                    <a href="register.html">Register</a>
+                </p>
+            </div>
+        </form>
+    </div>
+
+    
+
+
+    <script>
+        $(document).ready(function() {
+    $('#loginbtn').on('click', function(event){
+        event.preventDefault();
+
+        const email = $('#email').val();
+        const password = $('#password').val();
+
+        const postData = {
+            email: email,
+            password: password
+        };
+
+        $.ajax({
+            url: '/KanProjectWeb/Project/backend/rest/routes/user/login',
+            type: 'POST',
+            contentType: 'application/json', 
+            data: JSON.stringify(postData),
+            success: function(data) {
+                console.log("worked");
+                window.location.href = 'index.html'; 
+            },
+            error: function(xhr, status, error) {
+                console.error("Error:", error);
+            }
+        });
+    });
+});
+    </script>
+</body>
+<!-- asd -->
+</html>

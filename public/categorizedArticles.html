@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../styles.css">
+    <title>Categorized Articles</title>
+</head>
+<body>
+    <header>
+        <h1>Kanco Top News - Categorized Articles</h1>
+    </header>
+
+    <nav id="news_nav">
+        <div class="container">
+            <div class="container">
+                <a id="home-link">Home</a>
+                <a id="news-link">News</a> |
+                <a id="economy-link">Economy</a> |
+                <a id="sports-link">Sports</a> |
+                <a id="entertainment-link">Entertainment</a> |
+                <a id="login-link">Sign Up / Login </a>
+            </div>
+    </nav>
+
+    <main class="container">
+        <div id="article-container">
+            
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kanco Daily News</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var urlParams = new URLSearchParams(window.location.search);
+            var articleCategory = urlParams.get('category');
+    
+            if (articleCategory) {
+                $.ajax({
+                    url: '/KanProjectWeb/Project/backend/rest/routes/getcategorized',
+                    data: { category: articleCategory }, 
+                    dataType: 'json',
+                    method:'GET',
+                    success: function(data) {
+                        var articlesHtml = '';
+                        data.articles.forEach(function(article) {
+                            articlesHtml += '<div>';
+                            articlesHtml += '<a id="' + article.linkID + '" href="' + article.link + '">';
+                            articlesHtml += '<h2>' + article.title + '</h2>';
+                            articlesHtml += '<p>Date: ' + article.date + '</p>';
+                            articlesHtml += '<img src="' + article.image + '" alt="' + article.title + '">';
+                            articlesHtml += '</a>';
+                            articlesHtml += '</div>';
+                        });
+                        $('#article-container').html(articlesHtml);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error);
+                    }
+                });
+            }
+        });
+    </script>
+    
+
+
+<script>
+$(document).ready(function(){
+    $("#news-link").click(function(event) {
+        event.preventDefault();
+        $.get("news.html", function(data) {
+            $('body').html(data);
+        });
+    });
+});
+</script>
+
+<script>
+    $(document).ready(function(){
+        $("#economy-link").click(function(event) {
+            event.preventDefault();
+            $.get("economy.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $("#sports-link").click(function(event) {
+            event.preventDefault();
+            $.get("sports.html", function(data) {
+                $('body').html(data);
+                
+            });
+        });
+    });
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $("#entertainment-link").click(function(event) {
+            event.preventDefault();
+            $.get("entertainment.html", function(data) {
+                $('body').html(data);
+               
+            });
+        });
+    });
+    </script>
+
+
+<script>
+    $(document).ready(function(){
+        $("#login-link").click(function(event) {
+            event.preventDefault();
+            $.get("login.html", function(data) {
+                $('body').html(data);
+               
+            });
+        });
+    });
+    </script>
+
+
+<!-- Making loaded articles clickable -->
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#related-article-link-2", function(event) {
+            event.preventDefault();
+            var articleId = 2;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("witnesses-page.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#related-article-link-3", function(event) {
+            event.preventDefault();
+            var articleId = 3;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("article-page.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#related-article-link-1", function(event) {
+            event.preventDefault();
+            var articleId = 1;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("2-wounded-1-in-danger.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", ".related-article-link-10", function(event) {
+            event.preventDefault();
+            var articleId = 10;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("fed-cuts-march.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", ".related-article-link-11", function(event) {
+            event.preventDefault();
+            var articleId = 11;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("fed-cares.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", ".related-article-link-7", function(event) {
+            event.preventDefault();
+            var articleId = 7;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("economy-main-article.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", ".related-article-link-14", function(event) {
+            event.preventDefault();
+            var articleId = 14;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("award-winners.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", ".related-article-link-15", function(event) {
+            event.preventDefault();
+            var articleId = 15;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("barbie-heimer.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", ".related-article-link-9", function(event) {
+            event.preventDefault();
+            var articleId = 9;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("entertainment-main-article.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+
+    <script>
+        $(document).ready(function(){
+            $(document).on("click", ".related-article-link-5", function(event) {
+                event.preventDefault();
+                var articleId = 5;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+                $.get("trump-biden.html", function(data) {
+                    $('body').html(data);
+                });
+            });
+        });
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", ".related-article-link-4", function(event) {
+            event.preventDefault();
+            var articleId = 4;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("haley.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", ".related-article-link-12", function(event) {
+            event.preventDefault();
+            var articleId = 12;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("zoc-birthday.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", ".related-article-link-13", function(event) {
+            event.preventDefault();
+            var articleId = 13;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("milan-partizan.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#related-article-link-8", function(event) {
+            event.preventDefault();
+            var articleId = 8;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("sports-main-article.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+
+
+<script src="../js/loginLogout.js"></script>
+
+</body>
+</html>

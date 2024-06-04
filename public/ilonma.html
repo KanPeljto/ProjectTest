@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenAI fires back at Elon Musk</title>
+    <link rel="stylesheet" href="./../styles.css">
+</head>
+<body>
+    
+    <body id="topnewsbody">
+        <header>
+            <h1>Kanco Top News</h1>
+        </header>
+    
+        <main class="container">
+            <nav id="news_nav">
+                <div class="container">
+                    <div class="container">
+                        <a id="home-link">Home</a>
+                        <a id="news-link">News</a> |
+                        <a id="economy-link">Economy</a> |
+                        <a id="sports-link">Sports</a> |
+                        <a id="entertainment-link">Entertainment</a> |
+                        <a id="login-link">Sign Up / Login </a>
+                    </div>
+            </nav>
+
+            <h1>OpenAI publishes Elon Musk’s emails. ‘We’re sad that it’s come to this’
+            </h1>
+
+            <div class="article-main-image">
+                <img src="/images/ilonma2.jpeg" alt="" height="500px" width="1000px">
+            </div>
+
+            <div class="article-content-3">
+                <p>
+                    New York
+CNN
+ — 
+OpenAI fired back at Elon Musk, who sued the ChatGPT company last week for chasing profit and diverging from its original, nonprofit mission. Tuesday night, OpenAI published several of Musk’s emails from the early days of the company that appear to show Musk acknowledging OpenAI needed to make a ton of money to fund the incredible computing resources needed to power its AI ambitions.
+                    <br>
+                    <br>
+                    <br>
+                    In the emails, parts of which have been redacted, Musk argues that the company stood virtually no chance of building a successful generative AI platform by raising cash alone, and the company needed to find alternate sources of revenue to survive.
+                    In a November 22, 2015, email to CEO Sam Altman, Musk, an OpenAI co-founder, said the company needed to raise much more than $100 million to “avoid sounding hopeless.” Musk suggested a $1 billion funding commitment and promised that he would cover whatever did not get raised.
+                    <br><br>
+                    OpenAI in a blog post Tuesday night said Musk never followed through on his promise, committing $45 million in funding for OpenAI, while other donors raised $90 million. Lawyers for Musk declined to comment on OpenAI’s claims.
+                    <br><br>
+                    Musk, in a February 1, 2018, email, told company executives that the only path forward for OpenAI was for Tesla, his electric car company, to buy it. The company refused, and Musk left OpenAI later that year.
+                
+                    <br>
+                    In December 2018, Musk emailed Altman and other executives that OpenAI would not be relevant “without a dramatic change in execution and resources.” <br><br>
+                    “This needs billions per year immediately or forget it,” Musk emailed. “I really hope I’m wrong.”
+                    <br><br>
+                    OpenAI executives agreed. In 2019, they formed OpenAI LP, a for-profit entity that exists within the larger company’s structure. That for-profit company took OpenAI from effectively worthless to a valuation of $90 billion in just a few years — and Altman is largely credited as the mastermind of that plan and the key to the company’s success.
+                    <br>
+                    <br>
+                    The company said in its blog post that it has not diverged from its mission, and it would move to dismiss all of Musk’s claims. It said its technology is broadly available and improves people’s lives, while the company continues to commit to the safety of its products.
+
+                    <br>
+                    <br>
+
+                    “We’re sad that it’s come to this with someone whom we’ve deeply admired—someone who inspired us to aim higher, then told us we would fail, started a competitor, and then sued us when we started making meaningful progress towards OpenAI’s mission without him,” the company said in its blog post.
+                </p>
+
+               
+
+
+               
+                    
+            </div>
+
+            <div id="tag-container">
+                <a href="#tag" class="tags">Elon</a>
+                <a href="#tag" class="tags">Musk</a>
+                <a href="#tag" class="tags">OpenAI</a>
+
+            </div>
+
+            <div id="button-container">
+                <button class="view-comments">View Comments</button> 
+            </div>
+            
+
+            </main>
+
+            <br>
+            <br>
+            <br>
+
+            <footer>
+                <div class="container">
+                    <p>&copy; 2024 Kanco Daily News</p>
+                </div>
+            </footer>  
+            
+            
+            <script>
+                $(document).ready(function(){
+                    $("#home-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("index.html", function(data) {
+                            $('body').html(data);
+                            app.route({
+                                load: 'index.html'
+                            });
+                        });
+                    });
+                });
+                </script>
+
+<script>
+    $(document).ready(function(){
+        $("#news-link").click(function(event) {
+            event.preventDefault();
+            $.get("news.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+    </script>
+        
+            <script>
+                $(document).ready(function(){
+                    $("#economy-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("economy.html", function(data) {
+                            $('body').html(data);
+                            app.route({
+                                load: 'economy.html'
+                            });
+                        });
+                    });
+                });
+                </script>
+            
+            <script>
+                $(document).ready(function(){
+                    $("#sports-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("sports.html", function(data) {
+                            $('body').html(data);
+                            app.route({
+                                load: 'sports.html'
+                            });
+                        });
+                    });
+                });
+                </script>
+            
+            <script>
+                $(document).ready(function(){
+                    $("#entertainment-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("entertainment.html", function(data) {
+                            $('body').html(data);
+                            app.route({
+                                load: 'entertainment.html'
+                            });
+                        });
+                    });
+                });
+                </script>
+            
+            
+            <script>
+                $(document).ready(function(){
+                    $("#login-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("login.html", function(data) {
+                            $('body').html(data);
+                            app.route({
+                                load: 'login.html'
+                            });
+                        });
+                    });
+                });
+                </script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#button-container", function(event) {
+            event.preventDefault();
+            $.get("comments.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+
+<!-- Load categorizedArticles with category from tags -->
+<script>
+    $(document).ready(function() {
+        $('.tags').click(function() {
+            var category = $(this).text();
+            window.location.href = 'categorizedArticles.html?category=' + category;
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('.view-comments').click(function(e) {
+            e.preventDefault();
+            var articleID = 16;
+            window.location.href = 'comments.html?articleID=' + articleID;
+        });
+    });
+</script>
+
+<script src="../js/loginLogout.js"></script>
+</body>
+</html>
+

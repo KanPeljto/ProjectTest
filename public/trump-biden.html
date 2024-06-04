@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trump vs Biden elections</title>
+    <link rel="stylesheet" href="./../styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <body id="topnewsbody">
+        <header>
+            <h1>Kanco Top News</h1>
+        </header>
+    
+        <main class="container">
+            <nav id="news_nav">
+                <div class="container">
+                    <div class="container">
+                        <a id="home-link">Home</a>
+                        <a id="news-link">News</a> |
+                        <a id="economy-link">Economy</a> |
+                        <a id="sports-link">Sports</a> |
+                        <a id="entertainment-link">Entertainment</a> |
+                        <a id="login-link">Sign Up / Login </a>
+                    </div>
+            </nav>
+
+            <h1>Summary of Trump vs Biden elections</h1>
+
+            <div class="article-main-image">
+                <img src="/images/trumpbiden.jpeg" alt="" height="500px" width="1000px">
+            </div>
+            
+
+            <div class="article-content2">
+                
+                <p class="article-text">In 2020, the United States witnessed one of the most consequential presidential elections in its history, pitting the incumbent President Donald Trump against former Vice President Joe Biden. The electoral battle unfolded amidst a backdrop of political polarization, economic challenges, and a global pandemic that profoundly impacted the nation.</p> <br>
+                <h2>Nikki Haley exits race</h2>
+
+                <p>In a repudiation of the notion that Trump’s actions left him ineligible under the 14th Amendment’s “insurrectionist ban,” a unanimous court ruled that an individual state could not dump the former president from the ballot. </p>
+
+                    <div id="related-article-2-container">
+                        <article id="related-article-2">
+                        </article>
+
+                        <p id="text-horizontal">
+                            Donald Trump, a Republican, sought re-election after a tumultuous first term marked by controversial policies, fiery rhetoric, and unprecedented social and political upheavals. Throughout his presidency, Trump maintained a loyal base of supporters drawn to his unorthodox style and promises of economic prosperity and national security.
+                            <br>
+                            <br>
+                            Niki Haley dropped out of the presidental race after a series of losses on Super Tuesday, ensuring even higher Trump votes.<br> <br> <br>
+                            <br>
+                            On the other side stood Joe Biden, the Democratic challenger, offering a contrasting vision centered on unity, empathy, and a return to traditional norms. With decades of experience in public service, including eight years as Vice President under Barack Obama, Biden campaigned on a platform emphasizing healthcare reform, climate change mitigation, and restoring America's standing on the global stage.
+                            </p>
+                            
+                        
+                    </div>
+
+                    <h2>Bottom line: Trump will appear on ballots</h2>
+
+                    <div id="related-article-2-container">
+                        
+
+                        <p id="text-horizontal-right">
+                            There was no equivocation in the Supreme Court’s short opinion: States do not have the power to remove a federal candidate – especially a president – from the ballot under the Constitution’s “insurrectionist ban.” It is Congress, the court wrote, that can enforce the provision, not states. <br> <br> <br>
+                            <br>
+                            “The notion that the Constitution grants the states freer rein than Congress to decide how Section 3 should be enforced with respect to federal officer is simply implausible,” the court’s unsigned opinion read.
+                            What that means is that the impact of the decision will sweep far wider than the controversy at issue in Colorado. It means that any state would be overstepping its power by trying to knock Trump off the ballot – a position that will almost certainly shut down similar “insurrectionist” lawsuits across the country. <br> <br>
+
+                            In that sense, the court’s opinion was a significant victory for Trump, vanquishing a legal theory that has for months threatened his viability for a second term.
+                        
+                            <br>
+                            <br>
+                            <br>
+                            The Supreme Court's unanimous ruling not only affirmed Donald Trump's eligibility to appear on ballots but also underscored the enduring legal battles and controversies that defined the 2020 presidential elections. With Nikki Haley's exit from the race further solidifying Trump's position as the presumptive Republican nominee, the stage is set for a consequential November showdown with Joe Biden. As the nation grapples with the aftermath of a bitterly contested election and navigates the complexities of governance amidst deep-seated divisions, the ramifications of this historic electoral battle will reverberate far beyond the ballot box, shaping the course of American politics for years to come.
+                        </p>
+                            <article id="related-article-3">
+                                
+                            </article>
+
+                            
+                        
+                    </div>
+
+                    
+                   
+                    
+              
+        
+
+               
+
+
+                
+                    
+            </div>
+
+            <div id="tag-container">
+                <a href="#tag" class="tags">trump</a>
+                <a href="#tag" class="tags">biden</a>
+                <a href="#tag" class="tags">elections</a>
+                <a href="#tag"class="tags">haley</a>
+
+            </div>
+
+            <div id="button-container">
+                <button class="view-comments">View Comments</button> 
+            </div>
+            
+
+            </main>
+
+            <br>
+            <br>
+            <br>
+
+            <footer>
+                <div class="container">
+                    <p>&copy; 2024 Kanco Daily News</p>
+                </div>
+            </footer>     
+
+
+
+            <script>
+                $(document).ready(function(){
+                    $("#home-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("index.html", function(data) {
+                            $('body').html(data);
+                            app.route({
+                                load: 'index.html'
+                            });
+                        });
+                    });
+                });
+                </script>
+        
+            <script>
+                $(document).ready(function(){
+                    $("#economy-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("economy.html", function(data) {
+                            $('body').html(data);
+                            app.route({
+                                load: 'economy.html'
+                            });
+                        });
+                    });
+                });
+                </script>
+            
+            <script>
+                $(document).ready(function(){
+                    $("#sports-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("sports.html", function(data) {
+                            $('body').html(data);
+                            app.route({
+                                load: 'sports.html'
+                            });
+                        });
+                    });
+                });
+                </script>
+            
+            <script>
+                $(document).ready(function(){
+                    $("#entertainment-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("entertainment.html", function(data) {
+                            $('body').html(data);
+                            app.route({
+                                load: 'entertainment.html'
+                            });
+                        });
+                    });
+                });
+                </script>
+            
+            
+            <script>
+                $(document).ready(function(){
+                    $("#login-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("login.html", function(data) {
+                            $('body').html(data);
+                            app.route({
+                                load: 'login.html'
+                            });
+                        });
+                    });
+                });
+                </script>
+            
+
+            <!-- AJAX calls articles -->
+
+            <script>
+                $(document).ready(function() {
+                var articleID = 6; 
+            
+                $.ajax({
+                    url: '/KanProjectWeb/Project/backend/rest/routes/getarticle',
+                    data: { articleID: articleID },
+                    dataType: "json",
+                    success: function(data) {
+                        var article = data.articles[0]; 
+            
+                        var relatedArticlesHtml = '';
+            
+                        relatedArticlesHtml += '<a id="' + article.linkID + '" class="'+ article.linkClass +' ">';
+                        relatedArticlesHtml += '<img src="' + article.image +  '" alt="' + article.title + '" class="' + article.image_class + '">';
+                        relatedArticlesHtml += '<h4>' + article.content + '</h4>';
+                        relatedArticlesHtml += '</a>';
+            
+                        $('#related-article-2').html(relatedArticlesHtml);
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error);
+                    }
+                });
+            });
+            
+                </script>
+
+<script>
+    $(document).ready(function() {
+    var articleID = 4; 
+
+    $.ajax({
+        url: '/KanProjectWeb/Project/backend/get_article.php',
+        data: { articleID: articleID },
+        dataType: "json",
+        success: function(data) {
+            var article = data.articles[0]; 
+
+            var relatedArticlesHtml = '';
+
+            relatedArticlesHtml += '<a id="' + article.linkID + '" class="'+ article.linkClass +' ">';
+            relatedArticlesHtml += '<img src="' + article.image +  '" alt="' + article.title + '" class="' + article.image_class + '">';
+            relatedArticlesHtml += '<h4>' + article.content + '</h4>';
+            relatedArticlesHtml += '</a>';
+
+            $('#related-article-3').html(relatedArticlesHtml);
+        },
+        error: function(xhr, status, error) {
+            console.error(status, error);
+        }
+    });
+});
+
+    </script>
+
+
+<!-- spapp articles -->
+
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", ".related-article-link-6", function(event) {
+            event.preventDefault();
+            var articleId = 6;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("trump-news1.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", ".related-article-link-4", function(event) {
+            event.preventDefault();
+            var articleId = 4;
+            $.ajax({
+                    url: '/KanProjectWeb/Project/backend/countClick.php',
+                    method: 'POST',
+                    data: { article_id: articleId },
+                    success: function(response) {
+                        console.log(response); 
+                    },
+                    error: function(xhr, status, error) {
+                        console.error(status, error); 
+                    }
+                });
+            $.get("haley.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#button-container", function(event) {
+            event.preventDefault();
+            $.get("comments.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<!-- Load categorizedArticles with category from tags -->
+<script>
+    $(document).ready(function() {
+        $('.tags').click(function() {
+            var category = $(this).text();
+            window.location.href = 'categorizedArticles.html?category=' + category;
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('.view-comments').click(function(e) {
+            e.preventDefault();
+            var articleID = 5;
+            window.location.href = 'comments.html?articleID=' + articleID;
+        });
+    });
+</script>
+
+<script src="../js/loginLogout.js"></script>
+</body>
+</html>
+

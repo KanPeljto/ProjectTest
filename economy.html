@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanco economy news</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body id="topnewsbody">
+    <header>
+        <h1>Kanco Economy News</h1>
+    </header>
+
+    <main class="container">
+        <nav id="economy_nav">
+            <div class="container">
+            <a id="home-link">Home</a>
+            <a id="news-link">News</a> |
+            <a id="economy-link">Economy</a> |
+            <a id="sports-link">Sports</a> |
+            <a id="entertainment-link">Entertainment</a> |
+            <a class="login_tab " id="login-link">Sign Up / Login</a>  
+            </div>
+        </nav>
+
+        <h2><div id="economyicon"></div>News</h2>
+            <a href="economy-main-article.html" class="article_link"><article class="main_article">
+            <h2>Dow tumbles more than 500 points as hot inflation data stokes fears about higher-for-longer rates</h2>
+                <img src="/images/dow.webp" alt="Picture of the dow">
+                    <p>
+
+Stocks took a dive Tuesday after a key inflation report revealed stubborn price increases, raising concerns on Wall Street that the Federal Reserve will keep rates higher for longer than anticipated.
+                    </p>
+            </article>
+            </a>
+            <br>
+            <br>
+            <br>
+
+        <section class="news-section">
+            
+            <div id = 'articles'>
+                <div class="col">
+                    <article class="news_article">
+                        <h3 id="sec_article">The Fed probably won’t cut rates in March. Here’s what that means for markets</h3>
+                        <img src="/images/jerome powell.webp" height="350" width="300">
+                    </article>
+
+                    <article>
+                        <h3>Here’s why the Fed cares about the cost of your haircut and doctor’s visit</h3>
+                        <img src="/images/haircut.webp">
+                        <p>America’s inflation problem has improved greatly in some respects — but it remains stubborn for the price of services.</p>
+                    </article>
+                </div> 
+            
+            
+            <div class="children">
+            <article>
+                <h3 id="sec_article">
+                    Business live stream
+                </h3>
+                <iframe width="370" height="270" src="https://www.youtube.com/embed/iyOq8DhaMYw?si=5_jne_ltHfrRHLHu&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            </article>
+            
+
+            
+           
+        </div>   
+            
+        </section>
+        
+
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kanco Daily News</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+    $("#news-link").click(function(event) {
+        event.preventDefault();
+        $.get("news.html", function(data) {
+            $('body').html(data);
+        });
+    });
+});
+</script>
+
+<script>
+    $(document).ready(function(){
+        $("#economy-link").click(function(event) {
+            event.preventDefault();
+            $.get("economy.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $("#sports-link").click(function(event) {
+            event.preventDefault();
+            $.get("sports.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $("#entertainment-link").click(function(event) {
+            event.preventDefault();
+            $.get("entertainment.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+    </script>
+
+
+<script>
+    $(document).ready(function(){
+        $("#login-link").click(function(event) {
+            event.preventDefault();
+            $.get("login.html", function(data) {
+                $('body').html(data);
+                
+            });
+        });
+    });
+    </script>
+
+<script>
+    $(document).ready(function(){
+        $("#home-link").click(function(event) {
+            event.preventDefault();
+            $.get("index.html", function(data) {
+                $('body').html(data);
+                
+            });
+        });
+    });
+    </script>
+    
+</body>
+</html>

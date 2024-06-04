@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two injured, one in gravely danger</title>
+    <link rel="stylesheet" href="./../styles.css">
+</head>
+<body>
+    
+    <body id="topnewsbody">
+        <header>
+            <h1>Kanco Top News</h1>
+        </header>
+    
+        <main class="container">
+            <nav id="news_nav">
+                <div class="container">
+                    <a id="news-link">News</a> |
+                    <a id="economy-link">Economy</a> |
+                    <a id="sports-link">Sports</a> |
+                    <a id="entertainment-link">Entertainment</a> |
+                    <a id="login-link">Sign Up / Login </a>
+                </div>
+            </nav>
+
+            <h1>Witnesses called to testify in ongoing investigation</h1>
+
+            <div class="article-main-image">
+                <img src="/images/witness.jpeg" alt="" height="500px" width="1000px">
+            </div>
+
+            <div class="article-content">
+                <p>In the wake of a harrowing car crash that quickly escalated into a shooting incident, authorities have called upon witnesses to step forward and aid in the ongoing investigation. The incident, which unfolded at the intersection of Elm and Main Streets last Thursday evening, left two individuals critically injured and has sent shockwaves through the community. <br> <br> <br> <br>
+                    Eyewitnesses reported a scene of chaos as what initially appeared to be a routine car accident quickly devolved into a violent altercation. According to initial police reports, two vehicles were involved in the collision, with one vehicle allegedly rear-ending the other. However, what followed was anything but ordinary. <br>
+                    <img src="/images/courtroom.jpeg" alt="Courtroom" height="200px" width="300px" class="small-article-image"> <br>
+                    Moments after the crash, tensions flared between the occupants of the vehicles, culminating in gunfire that left two individuals wounded and prompted bystanders to flee for safety. Emergency services rushed to the scene, transporting the injured to the nearest hospital for urgent medical attention.
+                    Now, as law enforcement officials diligently pursue leads and sift through evidence, they are appealing to anyone who may have witnessed the events leading up to or following the altercation to come forward. <br> "The information provided by witnesses is crucial in piecing together the sequence of events and identifying those responsible," stated Detective Sarah Martinez, lead investigator on the case. <br> <br>
+                    Authorities have assured the public that witness testimony will be treated with the utmost confidentiality and encouraged anyone with relevant information to reach out to the local police department. "Even the smallest detail could prove instrumental in bringing those responsible to justice and providing closure to the victims and their families," emphasized Martinez. <br> <br>
+                    Community members have echoed these sentiments, emphasizing the importance of cooperation in ensuring the safety and well-being of all residents. "We must stand united against senseless violence and work together to hold perpetrators accountable," remarked local resident Mark Thompson. "No one should have to fear for their safety while simply navigating their daily lives."
+                </p>
+
+               
+
+
+                <div class="article-related-sidebar">
+
+                    <h3>Related</h3>
+                    <div id="related-articles"></div>
+                </div>
+                    
+            </div>
+
+            <div id="tag-container">
+                <a href="#tag" class="tags">shooting</a>
+                <a href="#tag" class="tags">car crash</a>
+
+            </div>
+
+            <div id="button-container">
+                <button class="view-comments">View Comments</button> 
+            </div>
+            
+
+            </main>
+
+            <br>
+            <br>
+            <br>
+
+            <footer>
+                <div class="container">
+                    <p>&copy; 2024 Kanco Daily News</p>
+                </div>
+            </footer>    
+            
+            
+            <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+            <script>
+            $(document).ready(function(){
+                $("#news-link").click(function(event) {
+                    event.preventDefault();
+                    $.get("news.html", function(data) {
+                        $('body').html(data);
+                    });
+                });
+            });
+            </script>
+            
+            <script>
+                $(document).ready(function(){
+                    $("#economy-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("economy.html", function(data) {
+                            $('body').html(data);
+                        });
+                    });
+                });
+                </script>
+            
+            <script>
+                $(document).ready(function(){
+                    $("#sports-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("sports.html", function(data) {
+                            $('body').html(data);
+                            
+                        });
+                    });
+                });
+                </script>
+            
+            <script>
+                $(document).ready(function(){
+                    $("#entertainment-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("entertainment.html", function(data) {
+                            $('body').html(data);
+                           
+                        });
+                    });
+                });
+                </script>
+            
+            
+            <script>
+                $(document).ready(function(){
+                    $("#login-link").click(function(event) {
+                        event.preventDefault();
+                        $.get("login.html", function(data) {
+                            $('body').html(data);
+                           
+                        });
+                    });
+                });
+                </script>
+
+
+<!-- AJAX calls for related articles -->
+
+
+<script>
+    $(document).ready(function() {
+        var articleIDs = [1, 3];
+
+        articleIDs.forEach(function(articleID) {
+            $.ajax({
+                url: '/KanProjectWeb/Project/backend/rest/routes/getarticle',
+                data: { articleID: articleID },
+                dataType: 'json',
+                success: function(data) {
+                    var article = data.articles[0];
+                    var articleHtml = '';
+
+                    articleHtml += '<div class="related-article">';
+                    articleHtml += '<a id="'+article.linkID + '" + href="' + article.link + '">';
+                    articleHtml += '<img src="' + article.image + '" alt="' + article.title + '" class="article-image">';
+                    articleHtml += '<h4>' + article.title + '</h4>';
+                    articleHtml += '</a>';
+                    articleHtml += '</div>';
+
+                    $('#related-articles').append(articleHtml);
+                },
+                error: function(xhr, status, error) {
+                    console.error(status, error);
+                }
+            });
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#related-article-link-1", function(event) {
+            event.preventDefault();
+            $.get("article-page.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+
+
+
+<script>
+    $(document).ready(function(){
+        $(document).on("click", "#button-container", function(event) {
+            event.preventDefault();
+            $.get("comments.html", function(data) {
+                $('body').html(data);
+            });
+        });
+    });
+</script>
+
+<!-- Load categorizedArticles with category from tags -->
+<script>
+    $(document).ready(function() {
+        $('.tags').click(function() {
+            var category = $(this).text();
+            window.location.href = 'categorizedArticles.html?category=' + category;
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        $('.view-comments').click(function(e) {
+            e.preventDefault();
+            var articleID = 2;
+            window.location.href = 'comments.html?articleID=' + articleID;
+        });
+    });
+</script>
+
+
+<script src="../js/loginLogout.js"></script>
+
+</body>
+</html>
+
